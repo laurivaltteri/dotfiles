@@ -1,6 +1,108 @@
 <p align="center"><img src="art/banner-2x.png"></p>
 
 ## Introduction
+Since the ansible was overkill for configuring local machine here's dotfiles inspired version of setting up (university administered macOS). The original inspiration comes from these:
+https://yadm.io/#  
+http://dotfiles.github.io/tutorials/  
+
+## Getting started
+
+#### Log in iCloud
+Appearance > Dark  
+Privacy & Security > Full Disk Access > + > Utilities/Terminal  
+Touch ID & Password > Add fingers & Add watch  
+Settings > Keyboard > Keyboard Shortcuts.. > Keyboard > Move focus to next Window  
+Settings > Keyboard > Input Sources > Edit...  
+Settings > iCloud > Drive > Desktop & Document Folders  
+
+#### Simultaneously
+Install software from University menu > Managed Software Center  
+[Setup Zotero](https://version.helsinki.fi/hipercog/wiki/-/wikis/zotero)  
+
+#### Add iCloud to `$HOME`
+```zsh
+cd
+ln -s "/Users/$USER/Library/Mobile Documents/com~apple~CloudDocs" icloud
+```
+
+## Start configuring
+
+#### Set zsh as shell
+```bash
+chsh -s /bin/zsh
+```
+#### Install brew and follow the `fresh.sh` script
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Remember to take the post install steps in zsh.
+
+#### Install apps, kegs, and binaries
+Copy and edit the `Brewfile`
+```zsh
+brew bundle
+```
+#### Setup the shell
+[Shell](https://harshithashok.com/tools/oh-my-zsh-with-starship/)
+Add `.zshrc` to `$HOME` (with starship launch)
+
+#### Setup some application
+Chrome, Protonmail Bridge, Finicky, Slack..
+
+#### Configure Github Copilot CLI
+[Configuration steps](https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/installing-github-copilot-in-the-cli)
+
+#### Configure VSCode
+copy preference files from Mackup
+install desired extensions from
+Cmd+Shift+P and type 'shell command' to find the Shell Command: Install 'code' command in PATH
+
+#### Run `.macos` 
+Run script to set rest of the macOS settings.
+
+#### Configure ultan
+[Access ePouta environments](https://wiki.helsinki.fi/X/UI63Gm)
+set ssh keys
+
+#### Configure rest of the SSH keys
+ssh-keygen -t ed25519 -C "<your_email>"
+pbcopy < ~/.ssh/<key>.pub
+add the key to services
+
+## Next setup development environments
+
+#### First let's setup python
+
+Add following to `.zshrc`
+```zsh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+Install `poetry`
+```zsh 
+pyenv install <python_ver>
+cd <repo_folder>
+pip install poetry
+```
+Initiate virtual environment
+```zsh 
+poetry shell
+poetry install # install the project dependencies
+```
+Remember that `jupyter` needs to be in poetry dev.dependencies
+In VSCode open `.ipynb` file try select kernel, and reboot if not found.
+Run smoothly!
+
+
+
+
+
+
+
+
+
+## The original how-to
 
 This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free to explore, learn and copy parts for your own dotfiles. Enjoy!
 
