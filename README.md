@@ -1,7 +1,10 @@
 <p align="center"><img src="art/banner-2x.png"></p>
 
 ## Introduction
-Since the ansible was overkill for configuring local machine here's dotfiles inspired version of setting up (university administered macOS). The original inspiration comes from these:
+Since the ansible was overkill for configuring local machine here's dotfiles inspired version of setting up (university administered macOS). It's done mostly manually, since Mackup is [not working with Sequoia](https://www.reddit.com/r/MacOS/comments/1f1rdvs/avoid_mackup_if_you_are_runing_sonoma_or_later/).
+
+
+The original inspiration comes from these:
 https://yadm.io/#  
 http://dotfiles.github.io/tutorials/  
 
@@ -94,7 +97,8 @@ Remember that `jupyter` needs to be in poetry dev.dependencies
 In VSCode open `.ipynb` file try select kernel, and reboot if not found.
 Run smoothly!
 
-
+---
+%% the original
 
 
 
