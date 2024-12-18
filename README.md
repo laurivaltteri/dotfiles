@@ -4,9 +4,9 @@
 Since the ansible was overkill for configuring local machine here's dotfiles inspired version of setting up (university administered macOS). It's done mostly manually, since Mackup is [not working with Sequoia](https://www.reddit.com/r/MacOS/comments/1f1rdvs/avoid_mackup_if_you_are_runing_sonoma_or_later/).
 
 
-The original inspiration comes from these:
-https://yadm.io/#  
-http://dotfiles.github.io/tutorials/  
+The original inspiration comes from these:  
+- https://yadm.io/#  
+- http://dotfiles.github.io/tutorials/  
 
 ## Getting started
 
@@ -50,6 +50,7 @@ brew bundle
 Add `.zshrc` to `$HOME` (with starship launch)
 
 #### Setup some application
+
 Chrome, Protonmail Bridge, Finicky, Slack..
 
 #### Configure Github Copilot CLI
@@ -96,6 +97,10 @@ poetry install # install the project dependencies
 Remember that `jupyter` needs to be in poetry dev.dependencies
 In VSCode open `.ipynb` file try select kernel, and reboot if not found.
 Run smoothly!
+
+
+#### Finally how about R on VSCode
+RStudio is running smoothly. However `renv` is breaking the radian. Clever bypass for installing radian for certain pyenv managed python is to the set `r.rterm.ma` for that version under `/Users/lvahonen/.pyenv/versions/<py_version>/bin/radian`. Other than that runnin lke intended.
 
 ---
 %% the original
