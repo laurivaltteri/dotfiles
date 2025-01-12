@@ -18,10 +18,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "LM2-610-26263"
-sudo scutil --set HostName "LM2-610-26263"
-sudo scutil --set LocalHostName "LM2-610-26263"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "LM2-610-26263"
+sudo scutil --set ComputerName "osmo"
+sudo scutil --set HostName "osmo"
+sudo scutil --set LocalHostName "osmo"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "osmo"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2

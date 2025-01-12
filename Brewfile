@@ -34,8 +34,10 @@ cask "slack"
 cask "spotify"
 cask "transmission"
 cask "whatsapp"
-cask "native-access"
+#cask "native-access" no ARM version installation
 cask "rekordbox"
+cask "google-chrome"
+cask "visual-studio-code"
 
 # Fonts
 cask "font-fira-code"
