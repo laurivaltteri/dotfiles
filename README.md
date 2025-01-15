@@ -30,14 +30,14 @@ ln -s "/Users/$USER/Library/Mobile Documents/com~apple~CloudDocs" icloud
 
 ## Start configuring
 
-#### Color everything (what is not covered by selected .dotfile)
+#### Color everything (what is not covered by selected .dotfiles)
 [Catppuccin](https://github.com/orgs/catppuccin/)
 
-#### Set zsh as shell (if for some reason set to bash (university)
+#### Set zsh as shell (if for some reason set to bash university 🤷)
 ```bash
 chsh -s /bin/zsh
 ```
-#### Install brew and follow the `fresh.sh` script
+#### Install brew
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
