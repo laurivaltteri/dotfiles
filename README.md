@@ -2,7 +2,7 @@
 
 ## Introduction
 Since the ansible was overkill for configuring local machine here's dotfiles inspired version of setting up (university administered macOS). It's done mostly manually, since Mackup is [not working with Sequoia](https://www.reddit.com/r/MacOS/comments/1f1rdvs/avoid_mackup_if_you_are_runing_sonoma_or_later/).
-
+Copy the up-to-date .dotfiles with [Mackup](https://github.com/lra/mackup).
 
 The original inspiration comes from these:  
 - https://yadm.io/#  
@@ -30,7 +30,10 @@ ln -s "/Users/$USER/Library/Mobile Documents/com~apple~CloudDocs" icloud
 
 ## Start configuring
 
-#### Set zsh as shell
+#### Color everything (what is not covered by selected .dotfile)
+[Catppuccin](https://github.com/orgs/catppuccin/)
+
+#### Set zsh as shell (if for some reason set to bash (university)
 ```bash
 chsh -s /bin/zsh
 ```
